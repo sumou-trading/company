@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="شركة السمو المتحدة التجارية في الرياض، المملكة العربية السعودية. خدمات تقنية وتعليم إلكتروني وتجارة خدمات باحترافية وموثوقية."
+    />
+    <meta name="theme-color" content="#06090f" />
+    <link rel="icon" type="image/svg+xml" href="./assets/logos/al-sumou-al-mutahida-logo.jpeg" />
+    <title>شركة السمو المتحدة التجارية | Al-Sumou Al-Mutahida Trading Co.</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/animations.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/rtl.css" />
+  </head>
+  <body>
+    <canvas id="portal-canvas" aria-hidden="true"></canvas>
+
+    <div class="page-shell">
+      <header class="site-header" id="site-header">
+        <a class="brand" href="#home" aria-label="شركة السمو المتحدة التجارية">
+          <img class="brand-mark" src="./assets/logos/al-sumou-al-mutahida-logo.jpeg" alt="شعار شركة السمو المتحدة التجارية" />
+          <span class="brand-copy">
+            <strong data-i18n="brandName">شركة السمو المتحدة التجارية</strong>
+            <small data-i18n="brandTagline">تقنية ترتقي بأعمالك</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+          <a href="#about" data-i18n="navAbout">عن سمو</a>
+          <a href="#activities" data-i18n="navActivities">الأنشطة</a>
+          <a href="#solutions" data-i18n="navSolutions">الحلول</a>
+          <a href="#contact" data-i18n="navContact">تواصل معنا</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="language-toggle" id="language-toggle" type="button" aria-label="Change language">
+            <span id="language-label">EN</span>
+          </button>
+          <a class="header-cta" href="#contact" data-i18n="requestQuote">اطلب عرضاً</a>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-label="فتح القائمة">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" data-i18n="navAbout">عن سمو</a>
+        <a href="#activities" data-i18n="navActivities">الأنشطة</a>
+        <a href="#solutions" data-i18n="navSolutions">الحلول</a>
+        <a href="#contact" data-i18n="navContact">تواصل معنا</a>
+      </div>
+
+      <main>
+        <section class="hero section" id="home">
+          <div class="hero-grid"></div>
+          <div class="hero-content">
+            <div class="hero-logo-wrap" data-reveal>
+              <img class="hero-logo" src="./assets/logos/al-sumou-al-mutahida-logo.jpeg" alt="شعار شركة السمو المتحدة التجارية" />
+              <div class="logo-orbit orbit-one"></div>
+              <div class="logo-orbit orbit-two"></div>
+            </div>
+
+            <p class="eyebrow" data-reveal data-i18n="heroEyebrow">الرياض · المملكة العربية السعودية</p>
+            <h1 data-reveal>
+              <span data-i18n="heroTitleOne">التقنية التي</span>
+              <span class="gradient-text" data-i18n="heroTitleTwo">تمنح أعمالك بُعداً جديداً</span>
+            </h1>
+            <p class="hero-description" data-reveal data-i18n="heroDescription">
+              نوفر الأجهزة الإلكترونية وحلول الحاسب والاتصالات بالجملة والتجزئة، بمنظومة احترافية تجمع الثقة والجودة وسرعة التوريد.
+            </p>
+
+            <div class="hero-actions" data-reveal>
+              <a class="primary-button magnetic" href="#activities">
+                <span data-i18n="exploreActivities">استكشف أنشطتنا</span>
+                <span class="button-arrow">↗</span>
+              </a>
+              <a class="secondary-button magnetic" href="#contact" data-i18n="talkToUs">تحدث معنا</a>
+            </div>
+
+            <div class="hero-metrics" data-reveal>
+              <div>
+                <strong>4</strong>
+                <span data-i18n="metricActivities">أنشطة تجارية معتمدة</span>
+              </div>
+              <div>
+                <strong>360°</strong>
+                <span data-i18n="metricCoverage">تغطية احتياجات الأعمال</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span data-i18n="metricResponse">جاهزية للتواصل</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-cue">
+            <span data-i18n="scroll">مرّر للاستكشاف</span>
+            <div class="scroll-line"></div>
+          </div>
+        </section>
+
+        <section class="about section portal-section" id="about">
+          <div class="section-glow glow-cyan"></div>
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="aboutEyebrow">من نحن</p>
+            <h2 data-i18n="aboutTitle">شريك تقني يفهم احتياجات السوق السعودي</h2>
+          </div>
+
+          <div class="about-layout">
+            <div class="about-copy glass-panel" data-reveal>
+              <p data-i18n="aboutDescription">
+                شركة السمو المتحدة التجارية متخصصة في بيع وتوريد الأجهزة الإلكترونية والحاسب والبرمجيات ومعدات الاتصالات. نخدم الأفراد والمنشآت والجهات الحكومية من الرياض برؤية تقوم على الاعتمادية والاختيار الذكي والقيمة طويلة المدى.
+              </p>
+              <div class="value-list">
+                <div>
+                  <span>01</span>
+                  <strong data-i18n="valueOneTitle">اختيار احترافي</strong>
+                  <p data-i18n="valueOneText">منتجات موثوقة من فئات مصممة للعمل بكفاءة.</p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <strong data-i18n="valueTwoTitle">مرونة التوريد</strong>
+                  <p data-i18n="valueTwoText">حلول مناسبة للمشتريات الفردية والكميات التجارية.</p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <strong data-i18n="valueThreeTitle">حضور محلي</strong>
+                  <p data-i18n="valueThreeText">خدمة مباشرة من الرياض باهتمام بالتفاصيل.</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="location-card" data-reveal href="https://www.google.com/maps/search/?api=1&query=Riyadh%2C%20Saudi%20Arabia" target="_blank" rel="noopener noreferrer" aria-label="فتح موقع الرياض في خرائط Google">
+              <div class="radar radar-one"></div>
+              <div class="radar radar-two"></div>
+              <div class="map-pin">
+                <span></span>
+              </div>
+              <div class="location-copy">
+                <small data-i18n="headquarters">المقر الرئيسي</small>
+                <strong data-i18n="riyadh">الرياض</strong>
+                <span data-i18n="saudiArabia">المملكة العربية السعودية</span>
+                <span class="map-link-label" data-i18n="openGoogleMaps">فتح في خرائط Google ↗</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="activities section portal-section" id="activities">
+          <div class="section-glow glow-violet"></div>
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="activitiesEyebrow">الأنشطة الرسمية</p>
+            <h2 data-i18n="activitiesTitle">منظومة تجارية متكاملة للأجهزة والتقنية</h2>
+            <p data-i18n="activitiesIntro">
+              أنشطة مسجلة تغطي البيع بالجملة والتجزئة للأجهزة والحاسب والبرمجيات والاتصالات والمنتجات السمعية والمرئية.
+            </p>
+          </div>
+
+          <div class="activity-grid">
+            <article class="activity-card" data-reveal>
+              <div class="activity-number">01</div>
+              <div class="activity-icon">
+                <span class="icon-core"></span>
+              </div>
+              <p class="activity-code">465100</p>
+              <h3 data-i18n="activityOneTitle">تجارة الجملة للحاسب والمعدات الطرفية والبرمجيات</h3>
+              <p data-i18n="activityOneText">أجهزة الحاسب، الشاشات، الملحقات، قطع الغيار والبرمجيات المتخصصة.</p>
+            </article>
+
+            <article class="activity-card" data-reveal>
+              <div class="activity-number">02</div>
+              <div class="activity-icon">
+                <span class="icon-core"></span>
+              </div>
+              <p class="activity-code">474110</p>
+              <h3 data-i18n="activityTwoTitle">البيع بالتجزئة لأجهزة الحاسب وملحقاتها</h3>
+              <p data-i18n="activityTwoText">توريد أجهزة ومستلزمات الحاسب للأفراد والمنشآت والجهات الحكومية.</p>
+            </article>
+
+            <article class="activity-card" data-reveal>
+              <div class="activity-number">03</div>
+              <div class="activity-icon">
+                <span class="icon-core"></span>
+              </div>
+              <p class="activity-code">474150</p>
+              <h3 data-i18n="activityThreeTitle">البيع بالتجزئة للبرمجيات ومعدات الاتصالات</h3>
+              <p data-i18n="activityThreeText">برمجيات، أجهزة اتصال، تجهيزات شبكات وقطع غيار متنوعة.</p>
+            </article>
+
+            <article class="activity-card" data-reveal>
+              <div class="activity-number">04</div>
+              <div class="activity-icon">
+                <span class="icon-core"></span>
+              </div>
+              <p class="activity-code">474200</p>
+              <h3 data-i18n="activityFourTitle">البيع بالتجزئة للأجهزة السمعية والمرئية</h3>
+              <p data-i18n="activityFourText">شاشات العرض والتلفزيونات الإلكترونية وحلول العرض المتطورة.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="solutions section portal-section" id="solutions">
+          <div class="section-glow glow-gold"></div>
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="solutionsEyebrow">مجالات التوريد</p>
+            <h2 data-i18n="solutionsTitle">حلول تقنية لكل مستوى من الأعمال</h2>
+          </div>
+
+          <div class="solutions-stage">
+            <div class="solution-visual" data-reveal>
+              <div class="device device-monitor">
+                <div class="device-screen">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="device device-laptop"></div>
+              <div class="device device-router"></div>
+              <div class="signal signal-one"></div>
+              <div class="signal signal-two"></div>
+            </div>
+
+            <div class="solution-list">
+              <div class="solution-item" data-reveal>
+                <span>01</span>
+                <div>
+                  <h3 data-i18n="solutionOneTitle">الحاسب والأجهزة الطرفية</h3>
+                  <p data-i18n="solutionOneText">أجهزة مكتبية ومحمولة، شاشات، طابعات وملحقات.</p>
+                </div>
+              </div>
+              <div class="solution-item" data-reveal>
+                <span>02</span>
+                <div>
+                  <h3 data-i18n="solutionTwoTitle">الاتصالات والشبكات</h3>
+                  <p data-i18n="solutionTwoText">معدات اتصال، تجهيزات شبكات وحلول ربط موثوقة.</p>
+                </div>
+              </div>
+              <div class="solution-item" data-reveal>
+                <span>03</span>
+                <div>
+                  <h3 data-i18n="solutionThreeTitle">البرمجيات والتراخيص</h3>
+                  <p data-i18n="solutionThreeText">برمجيات أعمال، أنظمة تشغيل وتراخيص احترافية.</p>
+                </div>
+              </div>
+              <div class="solution-item" data-reveal>
+                <span>04</span>
+                <div>
+                  <h3 data-i18n="solutionFourTitle">الصوتيات والمرئيات</h3>
+                  <p data-i18n="solutionFourText">شاشات احترافية وتجهيزات عرض للاستخدامات المتعددة.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="experience section portal-section">
+          <div class="experience-orbit"></div>
+          <div class="experience-copy" data-reveal>
+            <p class="eyebrow" data-i18n="experienceEyebrow">تجربة سمو</p>
+            <h2 data-i18n="experienceTitle">من الطلب إلى التسليم، كل خطوة محسوبة</h2>
+            <p data-i18n="experienceText">
+              نبدأ بفهم الاحتياج، نحدد الحل المناسب، ثم ننسق التوريد بسرعة ووضوح. النتيجة تجربة شراء أكثر ذكاءً وثقة.
+            </p>
+          </div>
+
+          <div class="process-track" data-reveal>
+            <div class="process-line"></div>
+            <div class="process-step">
+              <span>01</span>
+              <strong data-i18n="processOne">فهم الاحتياج</strong>
+            </div>
+            <div class="process-step">
+              <span>02</span>
+              <strong data-i18n="processTwo">اختيار الحل</strong>
+            </div>
+            <div class="process-step">
+              <span>03</span>
+              <strong data-i18n="processThree">تجهيز الطلب</strong>
+            </div>
+            <div class="process-step">
+              <span>04</span>
+              <strong data-i18n="processFour">التوريد والمتابعة</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact section portal-section" id="contact">
+          <div class="contact-panel" data-reveal>
+            <div class="contact-copy">
+              <p class="eyebrow" data-i18n="contactEyebrow">ابدأ المحادثة</p>
+              <h2 data-i18n="contactTitle">جاهزون لتجهيز احتياجك التقني القادم</h2>
+              <p data-i18n="contactText">
+                شاركنا نوع الأجهزة أو الكمية المطلوبة، وسيقوم فريق سمو بالتواصل معك لتقديم الحل المناسب.
+              </p>
+            </div>
+
+            <form class="contact-form" id="contact-form" method="POST">
+              <label>
+                <span data-i18n="formName">الاسم</span>
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                <span data-i18n="formPhone">رقم الجوال</span>
+                <input type="tel" name="phone" autocomplete="tel" required />
+              </label>
+              <label class="full-field">
+                <span data-i18n="formEmail">البريد الإلكتروني</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label class="full-field">
+                <span data-i18n="formRequest">ما الذي تحتاجه؟</span>
+                <textarea name="request" rows="4" required></textarea>
+              </label>
+              <input type="hidden" name="_subject" value="New request from Sumou Trading Company website" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="language" id="form-language" value="Arabic" />
+              <input type="hidden" name="page" id="form-page" value="" />
+              <input type="hidden" name="submitted_at" id="form-submitted-at" value="" />
+              <button class="primary-button" type="submit">
+                <span data-i18n="formSubmit">إرسال الطلب</span>
+                <span class="button-arrow">↗</span>
+              </button>
+              <p class="form-status" id="form-status"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <img src="./assets/logos/al-sumou-al-mutahida-logo.jpeg" alt="شعار شركة السمو المتحدة التجارية" />
+          <div>
+            <strong data-i18n="brandName">شركة السمو المتحدة التجارية</strong>
+            <span data-i18n="footerLocation">الرياض، المملكة العربية السعودية</span>
+          </div>
+        </div>
+        <p data-i18n="footerRights">© 2026 شركة السمو المتحدة التجارية. جميع الحقوق محفوظة.</p>
+      </footer>
+    </div>
+
+    <button class="scroll-top" id="scroll-top" type="button" aria-label="العودة إلى الأعلى" data-i18n-aria="scrollTop">
+      <span class="scroll-top-progress" aria-hidden="true"></span>
+      <span class="scroll-top-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="presentation">
+          <path d="M6 14.5 12 8l6 6.5" />
+        </svg>
+      </span>
+    </button>
+
+    <script type="module" src="./assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+@keyframes portal-breathe {
+  0%, 100% {
+    filter: saturate(1) brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: saturate(1.28) brightness(1.12);
+    transform: scale(1.025);
+  }
+}
+
+@keyframes spectral-scan {
+  0% {
+    transform: translate3d(-120%, 0, 0) skewX(-18deg);
+  }
+  100% {
+    transform: translate3d(240%, 0, 0) skewX(-18deg);
+  }
+}
+
+.hero-logo-wrap {
+  animation: portal-breathe 5s ease-in-out infinite;
+}
+
+.activity-card::after,
+.glass-panel::after,
+.contact-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 38%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  pointer-events: none;
+  transform: translate3d(-140%, 0, 0) skewX(-18deg);
+}
+
+.activity-card:hover::after,
+.glass-panel:hover::after,
+.contact-panel:hover::after {
+  animation: spectral-scan 1.2s ease;
+}
