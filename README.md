@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/images/logo.png" alt="AL-SUMOU AL-MUTAHIDA TRADING CO." width="220">
+<img width="1156" height="1003" alt="Image" src="https://github.com/user-attachments/assets/5bc876c2-a316-470c-ba5c-bf228583ff18" />
 
 # AL-SUMOU AL-MUTAHIDA TRADING CO.
 
