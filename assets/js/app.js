@@ -12,6 +12,38 @@ const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 const scrollTopButton = document.getElementById("scroll-top");
 
+function initialiseMobileScrollReset() {
+  const isNonDesktopDevice = window.matchMedia(
+    "(hover: none), (pointer: coarse)"
+  ).matches;
+
+  if (!isNonDesktopDevice) {
+    return;
+  }
+
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  const resetToTop = () => {
+    if (window.location.hash) {
+      history.replaceState(
+        history.state,
+        document.title,
+        `${window.location.pathname}${window.location.search}`
+      );
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
+
+  window.addEventListener("pageshow", () => {
+    resetToTop();
+    window.requestAnimationFrame(resetToTop);
+    window.setTimeout(resetToTop, 120);
+  });
+}
+
 async function loadTranslations(language) {
   if (state.translations[language]) {
     return state.translations[language];
@@ -290,6 +322,7 @@ function initialiseForm() {
 }
 
 async function initialiseWebsite() {
+  initialiseMobileScrollReset();
   try {
     await Promise.all([loadTranslations("ar"), loadTranslations("en")]);
     await applyLanguage(state.language);
