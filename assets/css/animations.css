@@ -39,3 +39,208 @@
 .contact-panel:hover::after {
   animation: spectral-scan 1.2s ease;
 }
+
+/* Distinct animated identity for each process step on every screen size */
+.process-track {
+  --step-one: #3fcf8e;
+  --step-two: #4db7ff;
+  --step-three: #d8b35f;
+  --step-four: #9b7cff;
+}
+
+.process-line {
+  background: linear-gradient(
+    90deg,
+    var(--step-four) 0%,
+    var(--step-three) 33%,
+    var(--step-two) 66%,
+    var(--step-one) 100%
+  );
+  background-size: 220% 100%;
+  animation: process-line-flow 7s linear infinite;
+  box-shadow: 0 0 14px rgba(79, 154, 112, 0.16);
+}
+
+.process-step span {
+  isolation: isolate;
+  overflow: visible;
+  transition: transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.process-step span::before,
+.process-step span::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.process-step:nth-of-type(2) span {
+  color: var(--step-one);
+  border-color: color-mix(in srgb, var(--step-one) 58%, transparent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--step-one) 22%, transparent);
+  animation: step-one-breathe 2.8s ease-in-out infinite;
+}
+
+.process-step:nth-of-type(2) span::before {
+  border: 1px solid color-mix(in srgb, var(--step-one) 48%, transparent);
+  animation: step-one-ripple 2.8s ease-out infinite;
+}
+
+.process-step:nth-of-type(3) span {
+  color: var(--step-two);
+  border-color: color-mix(in srgb, var(--step-two) 58%, transparent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--step-two) 22%, transparent);
+}
+
+.process-step:nth-of-type(3) span::before {
+  border: 1px dashed color-mix(in srgb, var(--step-two) 72%, transparent);
+  animation: step-two-orbit 5s linear infinite;
+}
+
+.process-step:nth-of-type(3) span::after {
+  inset: -2px;
+  border-top: 2px solid var(--step-two);
+  animation: step-two-orbit 2.4s linear infinite reverse;
+}
+
+.process-step:nth-of-type(4) span {
+  color: var(--step-three);
+  border-color: color-mix(in srgb, var(--step-three) 58%, transparent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--step-three) 22%, transparent);
+  animation: step-three-float 3.2s ease-in-out infinite;
+}
+
+.process-step:nth-of-type(4) span::before {
+  inset: -1px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0 30%,
+    color-mix(in srgb, var(--step-three) 88%, transparent) 42%,
+    transparent 54% 100%
+  );
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0);
+  animation: step-three-shimmer 3s linear infinite;
+}
+
+.process-step:nth-of-type(5) span {
+  color: var(--step-four);
+  border-color: color-mix(in srgb, var(--step-four) 58%, transparent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--step-four) 22%, transparent);
+  animation: step-four-spark 2.2s ease-in-out infinite;
+}
+
+.process-step:nth-of-type(5) span::before,
+.process-step:nth-of-type(5) span::after {
+  border: 1px solid color-mix(in srgb, var(--step-four) 56%, transparent);
+  animation: step-four-wave 3.2s ease-out infinite;
+}
+
+.process-step:nth-of-type(5) span::after {
+  animation-delay: 1.6s;
+}
+
+.process-step:hover span {
+  transform: translateY(-4px) scale(1.08);
+}
+
+@keyframes process-line-flow {
+  to {
+    background-position: -220% 0;
+  }
+}
+
+@keyframes step-one-breathe {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: brightness(1.28);
+  }
+}
+
+@keyframes step-one-ripple {
+  0% {
+    opacity: 0.72;
+    transform: scale(0.88);
+  }
+  80%, 100% {
+    opacity: 0;
+    transform: scale(1.55);
+  }
+}
+
+@keyframes step-two-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes step-three-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes step-three-shimmer {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes step-four-spark {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px color-mix(in srgb, var(--step-four) 42%, transparent));
+  }
+  50% {
+    filter: drop-shadow(0 0 9px color-mix(in srgb, var(--step-four) 76%, transparent));
+  }
+}
+
+@keyframes step-four-wave {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.9) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.52) rotate(90deg);
+  }
+}
+
+@media (max-width: 820px) {
+  .process-line {
+    background: linear-gradient(
+      to bottom,
+      var(--step-one) 0%,
+      var(--step-two) 33%,
+      var(--step-three) 66%,
+      var(--step-four) 100%
+    );
+    background-size: 100% 220%;
+    animation-name: process-line-flow-mobile;
+  }
+}
+
+@keyframes process-line-flow-mobile {
+  to {
+    background-position: 0 -220%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-line,
+  .process-step span,
+  .process-step span::before,
+  .process-step span::after {
+    animation: none !important;
+  }
+}
